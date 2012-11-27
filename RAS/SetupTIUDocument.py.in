@@ -1,0 +1,74 @@
+#---------------------------------------------------------------------------
+# Copyright 2011-2012 The Open Source Electronic Health Record Agent
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#---------------------------------------------------------------------------
+
+### set up the IO that is need by unit test
+import sys
+sys.path = ['${VISTA_SOURCE_DIR}/lib/vista'] + sys.path
+
+from OSEHRAHelper import ConnectToMUMPS,PROMPT
+VistA=ConnectToMUMPS("${UNITTEST_LOG_DIR}/SetupTIUDocument.log","${INSTANCE}","${NAMESPACE}")
+if ('${USERNAME}' and '${PASSWORD}'):
+  VistA.login('${USERNAME}','${PASSWORD}')
+if VistA.type=='cache':
+  try:
+    VistA.ZN('${NAMESPACE}')
+  except IndexError,no_namechange:
+    pass
+VistA.wait(PROMPT)
+VistA.write('S DUZ=1 D ^XUP')
+VistA.wait('OPTION NAME')
+VistA.write('TIU DOCUMENT DEFINITION EDIT')
+VistA.wait('TIU DOCUMENT DEFINITION NAME')
+VistA.write('ACT PT NOTIFICATION')
+index = VistA.multiwait(['Are you adding','NAME'])
+if index==0:
+  VistA.write('Y')
+  VistA.wait('NAME')
+VistA.write('')
+VistA.wait('ABBREVIATION')
+VistA.write('APN')
+VistA.wait('PRINT NAME')
+VistA.write('ACT PT NOTIFICATION')
+VistA.wait('TYPE')
+VistA.write('TITLE')
+VistA.wait('PERSONAL OWNER')
+VistA.write('')
+VistA.wait('CLASS OWNER')
+VistA.write('')
+VistA.wait('STATUS')
+VistA.write('')
+VistA.wait('1>')
+VistA.write('This is a template used as a\rplaceholder\r')
+VistA.wait('EDIT Option')
+VistA.write('')
+VistA.wait('UP METHOD')
+VistA.write('')
+VistA.wait('EDIT TEMPLATE')
+VistA.write('')
+VistA.wait('PRINT METHOD')
+VistA.write('')
+VistA.wait('VISIT LINKAGE METHOD')
+VistA.write('')
+VistA.wait('VALIDATION METHOD')
+VistA.write('')
+VistA.wait('OBJECT METHOD')
+VistA.write('')
+VistA.wait('Select ITEM')
+VistA.write('')
+VistA.wait('TIU DOCUMENT DEFINITION NAME')
+VistA.write('')
+VistA.wait(PROMPT)
+VistA.write('H')

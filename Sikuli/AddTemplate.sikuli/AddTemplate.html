@@ -1,0 +1,103 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }  
+         
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>AddTemplate.sikuli\AddTemplate.sikuli</h2> <a href="AddTemplate.sikuli\AddTemplate.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">import</span> sys
+<span class="kw">from</span> libs <span class="kw">import</span> *
+
+<span class="kw">try</span>:
+    WebSignOn()
+    <span class="skw">wait</span>(<img src="ppoiutmentPo.png" />,<span class="dig">5</span>)
+    <span class="kw">import</span> sys
+    <span class="skw">wait</span>(<img src="MainMenu-2.png" />,<span class="dig">5</span>)
+    <span class="skw">click</span>(<img src="AddTemglate.png" />)
+    <span class="skw">wait</span>(<img src="AddTemplate.png" />,<span class="dig">5</span>)
+    <span class="skw">type</span>(<img src="Templatename-1.png" />, <span class="str">'TESTTEMPLATE'</span>)
+    region = [Region(<span class="dig">17</span>,<span class="dig">424</span>,<span class="dig">520</span>,<span class="dig">306</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>),Region(<span class="dig">16</span>,<span class="dig">83</span>,<span class="dig">520</span>,<span class="dig">300</span>)]
+    text = [<span class="str">'AAAAA'</span>,<span class="str">'BBBBB'</span>,<span class="str">'CCCCC'</span>,<span class="str">'DDDDD'</span>,<span class="str">'EEEEE'</span>,<span class="str">'FFFFF'</span>,<span class="str">'GGGGG'</span>,<span class="str">'HHHHHH'</span>,<span class="str">'IIIII'</span>,<span class="str">'JJJJJ'</span>]
+    templatejump=[Pattern(<img src="OuickJumnlle.png" />).similar(<span class="dig">0.40</span>).targetOffset(-<span class="dig">100</span>,<span class="dig">0</span>),Pattern(<img src="OuickJumnlle.png" />).similar(<span class="dig">0.40</span>).targetOffset(<span class="dig">0</span>,-<span class="dig">2</span>),Pattern(<img src="OuickJumnlle.png" />).similar(<span class="dig">0.40</span>).targetOffset(<span class="dig">100</span>,<span class="dig">0</span>),Pattern(<img src="OuickJumnlle.png" />).similar(<span class="dig">0.40</span>).targetOffset(<span class="dig">200</span>,<span class="dig">0</span>),Pattern(<img src="OuickJumnlle.png" />).similar(<span class="dig">0.40</span>).targetOffset(-<span class="dig">200</span>,<span class="dig">25</span>),Pattern(<img src="OuickJumnlle.png" />).similar(<span class="dig">0.40</span>).targetOffset(-<span class="dig">100</span>,<span class="dig">25</span>),Pattern(<img src="OuickJumnlle.png" />).similar(<span class="dig">0.40</span>).targetOffset(<span class="dig">0</span>,<span class="dig">25</span>),Pattern(<img src="OuickJumnlle.png" />).similar(<span class="dig">0.40</span>).targetOffset(<span class="dig">100</span>,<span class="dig">25</span>),Pattern(<img src="OuickJumnlle.png" />).similar(<span class="dig">0.40</span>).targetOffset(<span class="dig">200</span>,<span class="dig">25</span>)]
+    <span class="kw">for</span> value <span class="kw">in</span> range(<span class="dig">0</span>,<span class="dig">10</span>):
+        <span class="kw">with</span> region[value].findAll(<img src="1351604870518.png" />) <span class="kw">as</span> template:
+            <span class="kw">while</span> template.hasNext():
+                region[value].<span class="skw">type</span>(template.next(),text[value])
+            <span class="kw">if</span> value &lt; <span class="dig">9</span>:
+                <span class="skw">click</span>(templatejump[value])
+    <span class="skw">click</span>(<img src="Save.png" />)
+    <span class="skw">wait</span>(<img src="Thetemolateh.png" />,<span class="dig">5</span>)
+    <span class="skw">click</span>(<img src="OK.png" />)
+    <span class="skw">wait</span>(<img src="AddTemplate-1.png" />)
+    <span class="skw">click</span>(<img src="Bottom-1.png" />)
+    WebSignOff()
+<span class="kw">finally</span>:
+    ExitWindow()
+</pre>
+</body>
+</html>
