@@ -61,11 +61,11 @@ option(AppCard_RAS "Test the Appointment Card Roll-and-Scroll interface" ON)
 if(AppCard_RAS)
 
   if(NOT AppCard_SIK)
-    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/RAS/RASTemplateSetup.py.in" "${CMAKE_CURRENT_BINARY_DIR}/RAS/RASTemplateSetup.py")
-    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/RAS/ClinicEditSetup.py.in" "${CMAKE_CURRENT_BINARY_DIR}/RAS/ClinicEditSetup.py")
+    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/RAS/RASTemplateSetup.py.in" "${CMAKE_CURRENT_BINARY_DIR}/RASTemplateSetup.py")
+    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/RAS/ClinicEditSetup.py.in" "${CMAKE_CURRENT_BINARY_DIR}/ClinicEditSetup.py")
     
-    execute_process(COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_BINARY_DIR}/RAS/RASTemplateSetup.py")
-    execute_process(COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_BINARY_DIR}/RAS/ClinicEditSetup.py")
+    execute_process(COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_BINARY_DIR}/RASTemplateSetup.py")
+    execute_process(COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_BINARY_DIR}/ClinicEditSetup.py")
   endif()
   
   # Glob for *.py.in files in the 'RAS' Directory 

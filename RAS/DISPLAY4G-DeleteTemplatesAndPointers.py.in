@@ -55,3 +55,5 @@ VistA.wait('Do you really want to halt')
 VistA.write('')
 VistA.wait(PROMPT)
 VistA.write('HALT')
+
+import RASTemplateSetup
