@@ -2,7 +2,7 @@ import os
 from sikuli import *
 def WebSignOn():
   try:
-      openApp("${BROWSER_EXECUTABLE}")
+      openApp("${BROWSER_EXECUTABLE} ${R1AC_LOGIN_PAGE}")
   except:
       raise FindFailed("Browser not found")
   wait("VistALogin-1.png",30)

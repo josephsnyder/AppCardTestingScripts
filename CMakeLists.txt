@@ -32,6 +32,7 @@ if(AppCard_SIK)
   #Glob for Sikuli folders in the 'Sikuli' directory
   file(GLOB testfiles ${CMAKE_CURRENT_SOURCE_DIR}/Sikuli/*.sikuli)
   foreach(testfile ${testfiles})
+    set(R1AC_LOGIN_PAGE CACHE STRING "URL to the login page of the R1AC Web Client side")
     get_filename_component(testfile_name "${testfile}" NAME_WE)
     if(${testfile_name} STREQUAL "libs")
       # Configure the libs.sikuli python and html to have the correct browser to open.
