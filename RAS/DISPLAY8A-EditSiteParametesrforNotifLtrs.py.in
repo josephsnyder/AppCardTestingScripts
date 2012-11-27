@@ -85,6 +85,8 @@ if index==0:
   VistA.write('Yes')
 elif index==1:
   VistA.write('')
+  VistA.wait('PATIENT NOTIFICATION TITLE')
+  VistA.write('')
 VistA.wait('SEND NOTE FOR REMOTE PRINTING')
 VistA.write('')
 VistA.wait('Select PATIENT NOTIFICATION TITLE')
