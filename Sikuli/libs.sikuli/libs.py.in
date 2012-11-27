@@ -7,7 +7,8 @@ def WebSignOn():
       raise FindFailed("Browser not found")
   wait("VistALogin-1.png",30)
   type(Pattern("AccessCode-1.png").similar(0.60), 'fakedoc1')
-  type(Pattern("VAVerifyCode-1.png").similar(0.40).targetOffset(30,0), '1Doc!@#$\r')
+  type(Key.TAB)
+  type('1Doc!@#$\r')
   
 def WebSignOff():
     type(Key.PAGE_DOWN)
