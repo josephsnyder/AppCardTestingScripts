@@ -46,9 +46,12 @@ if index==1:
   VistA.write('Yes')
 else:
   VistA.write('')
-VistA.wait('COMMAND',10)
-VistA.write('^\rE')
-VistA.wait('Select R1AC CROSSWALK CLINIC')
+index = VistA.multiwait(['COMMAND','Enter RETURN'])
+if index == 0:
+  VistA.write('^\rE')
+else:
+  VistA.write('')
+VistA.wait('Select R1AC CROSSWALK CLINIC',15)
 VistA.write('')
 VistA.wait('PostCard Crosswalk/Template Menu Option')
 VistA.write('')

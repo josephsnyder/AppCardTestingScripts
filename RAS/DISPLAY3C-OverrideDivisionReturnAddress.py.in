@@ -50,6 +50,20 @@ VistA.wait('COMMAND')
 VistA.write('\r123 Main St\rBld 200\rAnytown\rNY\r12011\rS\rE')
 VistA.wait('Select R1AC POSTCARD RETURN ADDRESS MEDICAL CENTER DIVISION')
 VistA.write('')
+
+# Remove the address that was just set by deleting the entry.
+VistA.wait('PostCard Setup Menu Option')
+VistA.write('3')
+VistA.wait('Select R1AC POSTCARD RETURN ADDRESS MEDICAL CENTER DIVISION')
+VistA.write('SOFTWARE SERVICE')
+VistA.wait('OK')
+VistA.write('')
+VistA.wait('COMMAND')
+VistA.write('@\rY')
+VistA.wait('Select R1AC POSTCARD RETURN ADDRESS MEDICAL CENTER DIVISION')
+VistA.write('')
+
+# Exit the menus
 VistA.wait('PostCard Setup Menu Option')
 VistA.write('')
 VistA.wait('PostCard Main Menu Option')

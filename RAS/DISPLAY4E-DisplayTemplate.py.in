@@ -40,7 +40,7 @@ VistA.write('2')
 VistA.wait('PostCard Crosswalk/Template Menu Option')
 VistA.write('5')
 VistA.wait('Select R1AC TEMPLATE NAME')
-VistA.write('TESTTEMPLATE')
+VistA.write('CLONETEMPLATE')
 VistA.wait('DEVICE')
 if sys.platform == 'win32':
   VistA.write('')
