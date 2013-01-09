@@ -8,7 +8,7 @@ try:  driver=webdriver.Firefox()
   driver.find_element(By.PARTIAL_LINK_TEXT,"Clone Template").click()
 
   select = Select(driver.find_element_by_name("cbxTemplate"))
-  select.select_by_index("1")
+  select.select_by_visible_text("TESTTEMPLATE")
 
   driver.find_element_by_name("edtTemplate").send_keys("CLONETEMPLATE")
 

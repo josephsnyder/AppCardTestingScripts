@@ -9,7 +9,7 @@ try:
   driver.find_element(By.PARTIAL_LINK_TEXT,"Edit Demographics").click()
 
   select = Select(driver.find_element_by_name("cbxClinic"))
-  select.select_by_index(3)
+  select.select_by_visible_text("VISTA HEALTH CARE")
   driver.find_element_by_name("edtFriendlyName").send_keys("VISTA Medical")
   driver.find_element_by_name("edtStreetAddress").send_keys("123 Main St.")
   driver.find_element_by_name("edtCityStateZip").send_keys("ANYTOWN, NY 1285")
